@@ -1,0 +1,34 @@
+#include <winres.h>
+
+#include "resource.h"
+#include "version.h"
+
+IDI_ARC ICON "arc.ico"
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION OA_VERSION_MAJOR, OA_VERSION_MINOR, OA_VERSION_PATCH, 0
+ PRODUCTVERSION OA_VERSION_MAJOR, OA_VERSION_MINOR, OA_VERSION_PATCH, 0
+ FILEFLAGSMASK VS_FFI_FILEFLAGSMASK
+ FILEFLAGS 0
+ FILEOS VOS_NT_WINDOWS32
+ FILETYPE VFT_APP
+ FILESUBTYPE VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041104B0"
+        BEGIN
+            VALUE "CompanyName", "Object Works"
+            VALUE "FileDescription", "ObjectArc keyboard launcher"
+            VALUE "FileVersion", OA_VERSION_STRING
+            VALUE "InternalName", "ObjectArc"
+            VALUE "OriginalFilename", "ObjectArc.exe"
+            VALUE "ProductName", "ObjectArc"
+            VALUE "ProductVersion", OA_VERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x411, 1200
+    END
+END
